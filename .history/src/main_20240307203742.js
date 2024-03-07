@@ -13,4 +13,4 @@ app.use(router)
 
 app.mount('#app')
 
-console.log(111)
+console.log();
