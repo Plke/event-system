@@ -53,7 +53,7 @@ const router = createRouter({
 // 3、具体对象 拦截到对应的地址
 router.beforeEach((to) => {
   const userStore = useUserStore()
-  console.log('token', userStore.token)
+  // console.log('token', userStore.token)
   if (!userStore.token && to.path !== '/login') return '/login'
 
   return true
