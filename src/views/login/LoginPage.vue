@@ -22,7 +22,7 @@ const rules = {
 
   username: [
     // 非空校验
-    { require: true, message: '请输入用户名', trigger: 'blur' },
+    { required: true, message: '请输入用户名', trigger: 'blur' },
     // 长度校验
     {
       min: 5,
@@ -32,7 +32,7 @@ const rules = {
     }
   ],
   password: [
-    { require: true, message: '请输入密码', trigger: 'blur' },
+    { required: true, message: '请输入密码', trigger: 'blur' },
     // 正则校验
     {
       pattern: /^\S{6,15}/,
@@ -41,7 +41,7 @@ const rules = {
     }
   ],
   repassword: [
-    { require: true, message: '请输入密码', trigger: 'blur' },
+    { required: true, message: '请输入密码', trigger: 'blur' },
     {
       pattern: /^\S{6,15}/,
       message: '密码为6-15位的非空字符字符',

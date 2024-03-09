@@ -1,7 +1,7 @@
 <script setup>
 defineProps({
   title: {
-    require: true,
+    required: true,
     type: String
   }
 })

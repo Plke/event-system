@@ -87,7 +87,11 @@ getArticleList()
     <el-form inline>
       <el-form-item label="文章分类">
         <!-- v-model => modelValue and @update:modelValue 的简写 -->
-        <ChannelSelect v-model="params.cate_id"></ChannelSelect>
+        <ChannelSelect
+          style="width: 100px"
+          placeholder="请选择"
+          v-model="params.cate_id"
+        ></ChannelSelect>
       </el-form-item>
       <el-form-item label="发布状态">
         <el-select
