@@ -1,3 +1,3 @@
 <template>
-  <div>更换尼玛</div>
+  <div>更换密码</div>
 </template>
