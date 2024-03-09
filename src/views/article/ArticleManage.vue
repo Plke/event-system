@@ -2,9 +2,10 @@
 import { ref } from 'vue'
 import { Delete, Edit } from '@element-plus/icons-vue'
 import ChannelSelect from './components/ChannelSelect.vue'
-import { artGetListService } from '@/api/article'
+import { artGetListService, artDelChannleService } from '@/api/article'
 import { formatTime } from '@/utils/format'
 import ArticleEdit from './components/ArticleEdit.vue'
+import { ElMessage } from 'element-plus'
 // import { pa } from '@element-plus/es/locale'
 const articleList = ref([])
 
@@ -15,8 +16,11 @@ const onEditArticle = (row) => {
   articleEditRef.value.open(row)
   // console.log(row)
 }
-const onDeleteArticle = (row) => {
-  console.log(row)
+const onDeleteArticle = async (row) => {
+  // 删除文件
+  await artDelChannleService(row.id)
+  ElMessage.success('删除成功')
+  getArticleList()
 }
 const onAddArticle = () => {
   // console.log(111)
